@@ -13,12 +13,21 @@ const Sidebar = props => {
       backgroundColor: 'blue',
       height: '100%',
       width: SidebarWidth,
+
+      // buggy behavior
       left: props.left,
+
+      // correct behavior
+      // left: 0,
+      // transform: [{
+        // translateX: props.left,
+      // }],
+
     }}
     >
-    <View style={{flex: 1, backgroundColor: 'yellow'}}>
-    <Text style={{flex: 1, backgroundColor: 'pink'}}>asdfasdf asdf asdf sadf asd fdas </Text>
-    </View>
+      <View style={{flex: 1, backgroundColor: 'yellow'}}>
+        <Text style={{flex: 1, backgroundColor: 'pink'}}>asdfasdf asdf asdf sadf asd fdas </Text>
+      </View>
     </Animated.View>
   )
 }
